@@ -1,11 +1,12 @@
 # Todos list app with React
 ## With authorization by using localStorage
+
 - HTML
 - CSS (SASS/SCSS)
 - JavaScript
 - React
 - React Functional Components
-- React hooks and cuntom hooks
+- React hooks and custom hooks
 - localStorage
 
 ## App url: https://my-todos-app-react.netlify.app
