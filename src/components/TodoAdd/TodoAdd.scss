@@ -1,0 +1,27 @@
+.todo-add {
+  width: 100%;
+  padding-bottom: 2rem;
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    flex: 1 1 auto;
+    margin-right: .5rem;
+   
+  }
+
+  &__btn {
+    padding: .5rem 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    background: rgba(161, 71, 236, 1);
+    border-radius: 2rem;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0.3rem 0.5rem .1rem rgba(0, 0, 0, .2);
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.list-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: .7rem;
+  background: rgba(255, 255, 255, .9);
+  cursor: pointer;
+  transition: box-shadow .4s ease-in-out;
+  border-radius: 1.7rem;
+
+  &:not(:last-child) {
+    margin-bottom: .5rem;
+
+  }
+
+  &:hover {
+    box-shadow: 0 0 .5rem .1rem rgba(0, 0, 0, .2);
+    z-index: 2;
+  }
+
+  &__checkbox {
+    flex: 0 0 auto;
+    position: relative;
+    display: inline-block;
+    width: 1.7rem;
+    height: 1.7rem;
+    border: 1px solid rgba(161, 71, 236, 0.7);
+    border-radius: 50%;
+
+    &:after {
+      content: '';
+      @include position(absolute, top, 45%, left, 50%);
+      transform: translate(-50%, -50%) rotate(-45deg) scale(0);
+      width: 35%;
+      height: 70%;
+      border-right: 3px solid limegreen;
+      border-bottom: 3px solid limegreen;
+      transition: all .5s cubic-bezier(0.175, 0.885, 0.325, 1.5);
+    }
+  }
+
+  &.done &__checkbox:after {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  }
+
+  &__label {
+    @include adaptive-value(font-size, 32, 16, 0);
+    flex: 1 1 auto;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin: 0 .5rem;
+    hyphens: auto;
+    transition: all .3s ease-in-out;
+  }
+
+  &.done &__label {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, .2);
+  }
+
+  &__btn {
+    color: #FF0000FF;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.1rem .5rem .4rem;
+    transition: all .4s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.5);
+
+    span {
+      display: inline-block;
+      transform: scale(2);
+    }
+
+  }
+
+  &:hover &__btn {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__icon {
+    width: 1rem;
+  }
+}

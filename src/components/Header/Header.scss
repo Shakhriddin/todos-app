@@ -1,0 +1,65 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__user {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__user-name {
+    display: flex;
+    align-items: center;
+    color: rgba(161, 71, 236, .3);
+
+    span {
+      @include adaptive-value(font-size, 32, 24, 0);
+      margin-left: .5rem;
+      margin-top: -0.1rem;
+      color: rgb(161, 71, 236);
+
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__user-info {
+    span {
+      display: inline-block;
+      font-weight: 500;
+
+      &:nth-child(1) {
+        color: tomato;
+      }
+
+      &:nth-child(2) {
+        margin-left: .4rem;
+        color: #00d554;
+      }
+    }
+  }
+  
+  &__btn {
+    padding: .3rem;
+    border-radius: .25rem;
+    transition: all .2s ease-in-out;
+    @include flex-center;
+
+    &:hover {
+      background: rgba(161, 71, 236, .2);
+    }
+
+    svg {
+      width: 2rem;
+    }
+  }
+
+}

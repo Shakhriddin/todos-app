@@ -1,0 +1,42 @@
+.todo-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+
+  &__input {
+    flex: 1 1 auto;
+    margin-right: .5rem;
+
+    input {
+      padding: .4rem .7rem;
+    }
+  }
+
+  &__btns {
+    display: flex;
+  }
+
+  &__btn {
+    flex: 1 1 33.3%;
+    padding: .4rem 1rem;
+    font-size: .9rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: all .3s ease-in-out;
+    border: 1px solid rgba(161, 71, 236, .3);
+    opacity: .5;
+    border-radius: 1.5rem;
+    color: #333;
+
+    &.active, &:hover {
+      opacity: 1;
+      color: #ffffff;
+      background: rgba(161, 71, 236, 1);
+    }
+
+    &:not(:last-child) {
+      margin-right: .3rem;
+    }
+  }
+}
